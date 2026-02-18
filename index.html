@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Kind of Learner Are You? ✨</title>
+<meta property="og:title" content="What Kind of Learner Are You? ✨">
+<meta property="og:description" content="8 questions. One scarily accurate result. Find out how your brain actually works — and what kind of learner lives inside you.">
+<meta property="og:url" content="https://hopethroughmusic.online">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:      #1C1408;
+  --cream:    #FDF8EE;
+  --warm:     #FFFCF5;
+  --sage:     #5C7E62;
+  --sage2:    #8AB090;
+  --sage3:    #C8DFCA;
+  --gold:     #C98A2E;
+  --gold2:    #E4AF5C;
+  --gold3:    #FAE8C4;
+  --rose:     #C4635C;
+  --rose2:    #E8A09A;
+  --rose3:    #FAE4E2;
+  --sky:      #4878A2;
+  --sky2:     #82B0CC;
+  --sky3:     #DCF0F8;
+  --plum:     #7B5EA0;
+  --plum2:    #B09CCE;
+  --plum3:    #EDE8F8;
+  --amber:    #B86830;
+  --amber2:   #D8946A;
+  --amber3:   #FAE8D8;
+  --border:   rgba(80,60,20,.1);
+  --sh:       0 6px 40px rgba(28,20,8,.09);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Nunito',sans-serif;
+  background:var(--cream);color:var(--ink);
+  min-height:100vh;overflow-x:hidden;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 10%,rgba(92,126,98,.08) 0%,transparent 60%),
+    radial-gradient(ellipse 60% 50% at 88% 80%,rgba(201,138,46,.07) 0%,transparent 55%),
+    radial-gradient(ellipse 50% 60% at 55% 45%,rgba(123,94,160,.04) 0%,transparent 60%);
+  pointer-events:none;z-index:0;
+}
+
+/* floating icons */
+.float-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.flt{
+  position:absolute;opacity:.055;
+  animation:floatUp linear infinite;
+  font-size:20px;
+}
+@keyframes floatUp{
+  from{transform:translateY(105vh) rotate(0deg);}
+  to{transform:translateY(-5vh) rotate(360deg);}
+}
+
+.wrap{max-width:630px;margin:0 auto;padding:16px 18px 52px;position:relative;z-index:1;}
+
+/* header */
+.hdr{text-align:center;padding:22px 0 18px;}
+.hdr-logo{
+  font-family:'Fraunces',serif;font-size:13px;font-weight:700;
+  color:var(--sage);letter-spacing:.8px;opacity:.7;
+}
+
+/* screens */
+.screen{display:none;}
+.screen.active{display:block;}
+
+/* card */
+.card{
+  background:var(--warm);border-radius:28px;
+  border:1px solid var(--border);box-shadow:var(--sh);
+  animation:cardIn .42s cubic-bezier(.22,1,.36,1);
+}
+@keyframes cardIn{
+  from{opacity:0;transform:translateY(20px) scale(.985);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+
+/* ── INTRO ── */
+.intro-inner{padding:52px 40px 48px;text-align:center;}
+.intro-sticker{
+  width:96px;height:96px;
+  background:linear-gradient(135deg,var(--sage3),var(--gold3),var(--plum3));
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:42px;
+  margin:0 auto 26px;
+  box-shadow:0 8px 28px rgba(92,126,98,.2);
+  animation:wiggle 2.6s ease-in-out infinite;
+}
+@keyframes wiggle{
+  0%,100%{transform:rotate(-5deg) scale(1);}
+  50%{transform:rotate(5deg) scale(1.06);}
+}
+.kicker{
+  font-size:11px;font-weight:900;letter-spacing:3px;
+  text-transform:uppercase;color:var(--gold);
+  display:inline-block;margin-bottom:14px;
+}
+.intro-inner h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(28px,6vw,44px);
+  font-weight:900;line-height:1.1;
+  color:var(--ink);margin-bottom:16px;
+}
+.intro-inner h1 em{font-style:italic;color:var(--sage);}
+.intro-inner .sub{
+  font-size:16px;color:#6B5840;line-height:1.65;
+  margin-bottom:10px;max-width:420px;
+  margin-left:auto;margin-right:auto;
+}
+.intro-inner .warning{
+  font-size:13px;color:var(--rose);
+  font-weight:700;font-style:italic;margin-bottom:30px;
+}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:34px;}
+.pill{
+  background:var(--sage3);color:var(--sage);
+  border:1px solid rgba(92,126,98,.22);
+  border-radius:100px;padding:5px 14px;
+  font-size:13px;font-weight:700;
+}
+.btn-start{
+  background:linear-gradient(135deg,var(--ink) 0%,#3C2C14 100%);
+  color:var(--gold2);border:none;border-radius:100px;
+  padding:18px 44px;font-size:17px;font-weight:900;
+  cursor:pointer;font-family:'Nunito',sans-serif;
+  box-shadow:0 6px 24px rgba(28,20,8,.28);
+  transition:all .2s;letter-spacing:.3px;
+}
+.btn-start:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(28,20,8,.34);}
+
+/* ── PROGRESS ── */
+.prog-wrap{margin:0 0 18px;}
+.prog-top{
+  display:flex;justify-content:space-between;
+  font-size:12px;font-weight:800;text-transform:uppercase;
+  letter-spacing:1px;color:#A0906A;margin-bottom:8px;
+}
+.prog-bar{height:6px;background:rgba(92,126,98,.14);border-radius:100px;overflow:hidden;}
+.prog-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--sage),var(--sage2));
+  border-radius:100px;transition:width .5s cubic-bezier(.22,1,.36,1);
+}
+
+/* ── QUESTION ── */
+.q-inner{padding:38px 34px 30px;}
+.q-num{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#B0946A;font-weight:900;margin-bottom:12px;}
+.q-text{
+  font-family:'Fraunces',serif;
+  font-size:clamp(19px,3.8vw,26px);
+  font-weight:700;line-height:1.3;
+  color:var(--ink);margin-bottom:24px;
+}
+.q-sub{font-size:14px;color:#A0906A;margin-top:-16px;margin-bottom:20px;font-style:italic;}
+
+/* grid layout */
+.opts-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.opt-tile{
+  background:var(--cream);border:2px solid var(--border);
+  border-radius:16px;padding:18px 14px 15px;
+  cursor:pointer;text-align:center;
+  font-family:'Nunito',sans-serif;
+  transition:all .18s cubic-bezier(.22,1,.36,1);
+  display:flex;flex-direction:column;align-items:center;gap:7px;
+}
+.opt-tile .te{font-size:30px;line-height:1;}
+.opt-tile .tt{font-size:14px;font-weight:800;line-height:1.25;color:var(--ink);}
+.opt-tile .ts{font-size:12px;color:#A0906A;font-weight:600;line-height:1.3;}
+.opt-tile:hover{border-color:var(--sage);background:var(--sage3);transform:translateY(-3px) scale(1.02);box-shadow:0 6px 18px rgba(92,126,98,.18);}
+.opt-tile.sel{border-color:var(--sage);background:linear-gradient(145deg,var(--sage3),rgba(92,126,98,.07));box-shadow:0 4px 16px rgba(92,126,98,.2);}
+.opt-tile.sel .tt{color:var(--sage);}
+
+/* list layout */
+.opts-list{display:flex;flex-direction:column;gap:9px;}
+.opt-row{
+  display:flex;align-items:center;gap:14px;
+  background:var(--cream);border:2px solid var(--border);
+  border-radius:14px;padding:15px 18px;
+  cursor:pointer;transition:all .17s ease;
+}
+.opt-row .re{font-size:24px;flex-shrink:0;width:32px;text-align:center;}
+.opt-row .rtext .rt{font-size:15px;font-weight:800;color:var(--ink);line-height:1.3;}
+.opt-row .rtext .rs{font-size:13px;color:#A0906A;font-weight:600;}
+.opt-row:hover{border-color:var(--sage);background:var(--sage3);transform:translateX(4px);}
+.opt-row.sel{border-color:var(--sage);background:var(--sage3);}
+.opt-row.sel .rt{color:var(--sage);}
+.opt-row.sel::after{content:'✓';margin-left:auto;color:var(--sage);font-weight:900;font-size:16px;flex-shrink:0;}
+
+.q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:28px;gap:12px;}
+.btn-back{
+  background:transparent;border:2px solid var(--border);
+  border-radius:100px;padding:11px 22px;
+  font-size:14px;font-weight:700;color:#A0906A;
+  cursor:pointer;font-family:'Nunito',sans-serif;transition:all .18s;
+}
+.btn-back:hover{border-color:var(--sage);color:var(--sage);}
+.btn-next{
+  background:linear-gradient(135deg,var(--ink),#3C2C14);
+  color:var(--gold2);border:none;border-radius:100px;
+  padding:13px 32px;font-size:15px;font-weight:900;
+  cursor:pointer;font-family:'Nunito',sans-serif;
+  box-shadow:0 4px 16px rgba(28,20,8,.22);
+  transition:all .18s;margin-left:auto;letter-spacing:.3px;
+}
+.btn-next:hover{transform:translateY(-2px);box-shadow:0 7px 22px rgba(28,20,8,.3);}
+.btn-next:disabled{opacity:.3;cursor:not-allowed;transform:none;}
+
+/* ── LOADING ── */
+.loading-inner{padding:64px 28px;text-align:center;}
+.loading-inner h2{font-family:'Fraunces',serif;font-size:26px;font-weight:900;color:var(--ink);margin-bottom:10px;}
+.loading-inner p{font-size:15px;color:#A0906A;margin-bottom:30px;}
+.ldr-bar-wrap{max-width:280px;margin:0 auto 16px;height:8px;background:rgba(92,126,98,.14);border-radius:100px;overflow:hidden;}
+.ldr-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--sage),var(--gold2));border-radius:100px;animation:ldrUp 2.3s cubic-bezier(.22,1,.36,1) forwards;}
+@keyframes ldrUp{0%{width:0%}100%{width:100%}}
+.ldr-emoji{font-size:40px;display:block;margin-bottom:20px;animation:spin 1.4s linear infinite;}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+/* ── LEAD ── */
+.lead-inner{padding:44px 36px;text-align:center;}
+.lead-inner h2{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:var(--ink);margin-bottom:10px;}
+.lead-inner .lead-sub{font-size:15px;color:#6B5840;line-height:1.6;margin-bottom:24px;}
+.lform{display:flex;flex-direction:column;gap:11px;max-width:380px;margin:0 auto 16px;}
+.lform input,.lform textarea{
+  border:2px solid var(--border);border-radius:13px;
+  padding:13px 16px;font-family:'Nunito',sans-serif;
+  font-size:15px;color:var(--ink);background:var(--cream);
+  outline:none;transition:border-color .2s;resize:vertical;font-weight:600;
+}
+.lform input:focus,.lform textarea:focus{border-color:var(--sage);}
+.lform input::placeholder,.lform textarea::placeholder{color:#B0946A;font-weight:600;}
+.cb-row{
+  display:flex;align-items:flex-start;gap:10px;
+  text-align:left;font-size:14px;color:#6B5840;
+  cursor:pointer;font-weight:700;padding:2px 0;
+}
+.cb-row input[type=checkbox]{width:18px;height:18px;flex-shrink:0;accent-color:var(--sage);margin:0;cursor:pointer;}
+.btn-reveal{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:white;border:none;border-radius:13px;
+  padding:16px;font-size:16px;font-weight:900;
+  cursor:pointer;font-family:'Nunito',sans-serif;
+  box-shadow:0 4px 18px rgba(201,138,46,.32);
+  transition:all .2s;width:100%;
+}
+.btn-reveal:hover{transform:translateY(-2px);box-shadow:0 7px 24px rgba(201,138,46,.42);}
+.privacy{font-size:12px;color:#B0946A;font-weight:700;}
+
+/* ── RESULT ── */
+.result-wrap{animation:cardIn .5s cubic-bezier(.22,1,.36,1);}
+.result-hero{border-radius:28px;overflow:hidden;box-shadow:var(--sh);border:1px solid var(--border);margin-bottom:14px;background:var(--warm);}
+.r-band{height:10px;width:100%;}
+.r-inner{padding:38px 32px 34px;text-align:center;}
+.r-ring{
+  width:100px;height:100px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:46px;margin:0 auto 20px;
+  box-shadow:0 6px 24px rgba(0,0,0,.12);
+  animation:popIn .5s cubic-bezier(.34,1.56,.64,1) .1s both;
+}
+@keyframes popIn{from{transform:scale(0) rotate(-20deg);}to{transform:scale(1) rotate(0deg);}}
+.r-you-are{font-size:11px;font-weight:900;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;}
+.r-title{font-family:'Fraunces',serif;font-size:clamp(30px,7vw,46px);font-weight:900;line-height:1.05;color:var(--ink);margin-bottom:14px;}
+.r-tagline{font-family:'Fraunces',serif;font-size:18px;font-style:italic;line-height:1.45;margin-bottom:18px;}
+.r-desc{font-size:15px;color:#6B5840;line-height:1.78;margin-bottom:22px;text-align:left;}
+.r-desc p{margin-bottom:13px;}
+.r-traits{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-bottom:8px;}
+.r-trait{border-radius:100px;padding:5px 14px;font-size:13px;font-weight:800;border:2px solid;}
+
+/* famous match */
+.famous-box{
+  border-radius:16px;padding:18px 20px;margin-top:20px;
+  text-align:left;display:flex;align-items:flex-start;gap:14px;
+}
+.famous-emoji{font-size:30px;flex-shrink:0;}
+.famous-label{font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.famous-name{font-family:'Fraunces',serif;font-size:20px;font-weight:700;margin-bottom:4px;}
+.famous-why{font-size:13px;color:#6B5840;line-height:1.5;font-weight:600;}
+
+/* subject spotlight */
+.subjects-box{
+  border-radius:16px;padding:18px 20px;margin-top:16px;
+  text-align:left;
+}
+.subjects-label{font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+.subject-tags{display:flex;gap:7px;flex-wrap:wrap;}
+.subject-tag{
+  border-radius:100px;padding:6px 14px;
+  font-size:13px;font-weight:800;border:2px solid;
+  display:inline-flex;align-items:center;gap:5px;
+}
+
+/* studio connection */
+.studio-card{
+  background:var(--warm);border-radius:24px;
+  border:1px solid var(--border);box-shadow:var(--sh);
+  padding:30px 28px;margin-bottom:14px;
+}
+.studio-eyebrow{font-size:11px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.studio-card h3{font-family:'Fraunces',serif;font-size:21px;font-weight:900;color:var(--ink);margin-bottom:10px;line-height:1.25;}
+.studio-card p{font-size:14px;color:#6B5840;line-height:1.68;margin-bottom:20px;}
+.btn-studio{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--sage),var(--sage2));
+  color:white;border:none;border-radius:100px;
+  padding:13px 28px;font-size:14px;font-weight:800;
+  cursor:pointer;font-family:'Nunito',sans-serif;
+  box-shadow:0 4px 14px rgba(92,126,98,.3);
+  transition:all .18s;text-decoration:none;
+}
+.btn-studio:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(92,126,98,.4);}
+.btn-studio.rose-btn{background:linear-gradient(135deg,var(--rose),var(--rose2));box-shadow:0 4px 14px rgba(196,99,92,.3);}
+.btn-studio.rose-btn:hover{box-shadow:0 7px 20px rgba(196,99,92,.4);}
+
+/* group class insight card */
+.group-card{
+  background:var(--warm);border-radius:24px;
+  border:1px solid var(--border);box-shadow:var(--sh);
+  padding:30px 28px;margin-bottom:14px;
+  overflow:hidden;position:relative;
+}
+.group-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:5px;
+}
+.group-eyebrow{
+  font-size:11px;font-weight:900;letter-spacing:2.5px;
+  text-transform:uppercase;margin-bottom:16px;
+}
+.group-split{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:480px){.group-split{grid-template-columns:1fr;}}
+.group-col{border-radius:16px;padding:18px 16px;}
+.group-col-icon{font-size:24px;margin-bottom:8px;}
+.group-col-title{
+  font-family:'Fraunces',serif;font-size:15px;font-weight:700;
+  color:var(--ink);margin-bottom:8px;line-height:1.2;
+}
+.group-col-text{font-size:13px;line-height:1.65;font-weight:600;}
+
+/* share */
+.share-card{
+  background:var(--warm);border-radius:24px;
+  border:1px solid var(--border);box-shadow:var(--sh);
+  padding:26px 24px;text-align:center;margin-bottom:14px;
+}
+.share-card h4{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:5px;}
+.share-card p{font-size:14px;color:#A0906A;font-weight:600;margin-bottom:18px;}
+.share-btns{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;}
+.sbtn{
+  display:inline-flex;align-items:center;gap:7px;
+  border-radius:100px;padding:10px 20px;
+  font-size:13px;font-weight:800;cursor:pointer;
+  font-family:'Nunito',sans-serif;transition:all .18s;
+  text-decoration:none;border:2px solid;
+}
+.sbtn-fb{background:#1877F2;color:white;border-color:#1877F2;}
+.sbtn-fb:hover{background:#1565C0;border-color:#1565C0;}
+.sbtn-copy{background:var(--cream);color:var(--ink);border-color:var(--border);}
+.sbtn-copy:hover{border-color:var(--sage);color:var(--sage);}
+.sbtn-link{background:var(--cream);color:var(--ink);border-color:var(--border);}
+.sbtn-link:hover{border-color:var(--gold);color:var(--gold);}
+
+.retake-row{text-align:center;padding-top:4px;}
+.retake-row button{background:transparent;border:none;color:#B0946A;font-size:13px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;text-decoration:underline;}
+
+#cv{position:fixed;inset:0;pointer-events:none;z-index:999;}
+footer{text-align:center;padding:20px 0 8px;font-size:12px;color:#B0946A;font-weight:700;}
+footer a{color:var(--sage);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="float-bg" id="floatBg"></div>
+<canvas id="cv"></canvas>
+
+<div class="wrap">
+  <div class="hdr"><span class="hdr-logo">✨ Hope Through Music</span></div>
+
+  <!-- ══ INTRO ══ -->
+  <div class="screen active" id="s-intro">
+    <div class="card">
+      <div class="intro-inner">
+        <div class="intro-sticker">🧠</div>
+        <div class="kicker">The Quiz Everyone's Sending Right Now</div>
+        <h1>What Kind of<br><em>Learner</em><br>Are You?</h1>
+        <p class="sub">8 surprisingly fun questions. One result that'll make you say "wait, how did it know that?" Find out how your brain actually works.</p>
+        <p class="warning">⚠️ Warning: results are dangerously accurate. Share with someone who needs to take this.</p>
+        <div class="pills">
+          <span class="pill">⚡ 60 seconds</span>
+          <span class="pill">🎯 8 questions</span>
+          <span class="pill">✨ 5 results</span>
+        </div>
+        <button class="btn-start" onclick="startQuiz()">Discover My Learner Type →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ QUIZ ══ -->
+  <div class="screen" id="s-quiz">
+    <div class="prog-wrap">
+      <div class="prog-top">
+        <span id="p-lbl">1 of 8</span>
+        <span id="p-pct">0%</span>
+      </div>
+      <div class="prog-bar"><div class="prog-fill" id="p-fill" style="width:0%"></div></div>
+    </div>
+    <div class="card q-inner" id="q-card"></div>
+  </div>
+
+  <!-- ══ LOADING ══ -->
+  <div class="screen" id="s-loading">
+    <div class="card loading-inner">
+      <span class="ldr-emoji" id="ldr-e">🧠</span>
+      <h2 id="ldr-h">Analyzing your learning style...</h2>
+      <p id="ldr-p">Cross-referencing with 47 learning profiles</p>
+      <div class="ldr-bar-wrap"><div class="ldr-bar"></div></div>
+    </div>
+  </div>
+
+  <!-- ══ LEAD CAPTURE ══ -->
+  <div class="screen" id="s-lead">
+    <div class="card lead-inner">
+      <div style="font-size:48px;margin-bottom:16px">🎁</div>
+      <h2>Your result is ready!</h2>
+      <p class="lead-sub">Just your name and email to unlock your learner type — we'll also send you something special from Hope Through Music. 💛</p>
+      <div class="lform">
+        <input type="text" id="l-name" placeholder="First name" />
+        <input type="email" id="l-email" placeholder="Email address" />
+        <input type="tel" id="l-phone" placeholder="Phone (optional)" />
+        <textarea id="l-comments" rows="2" placeholder="Any questions or comments for us? 💬 (optional)"></textarea>
+        <label class="cb-row">
+          <input type="checkbox" id="l-opt" checked />
+          Yes! Send me encouragement, class news & updates. 🎶
+        </label>
+        <button class="btn-reveal" onclick="submitLead()">Reveal My Learner Type! 🎉</button>
+      </div>
+      <p class="privacy">No spam. Just hope, encouragement & belonging. 💛</p>
+    </div>
+  </div>
+
+  <!-- ══ RESULT ══ -->
+  <div class="screen" id="s-result">
+    <div class="result-wrap">
+      <div class="result-hero" id="r-hero"></div>
+      <div id="r-group"></div>
+      <div id="r-studio"></div>
+      <div class="share-card">
+        <h4>Send this to someone who needs to take it 👇</h4>
+        <p>Tag a friend, share your result, or send the quiz to someone who'd love it.</p>
+        <div class="share-btns">
+          <a class="sbtn sbtn-fb" href="#" onclick="return fbShare()">
+            <svg width="15" height="15" fill="white" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.027 4.388 11.024 10.125 11.927v-8.437H7.078v-3.49h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.437C19.612 23.097 24 18.1 24 12.073z"/></svg>
+            Share on Facebook
+          </a>
+          <button class="sbtn sbtn-copy" onclick="copyResult()">📋 Copy Result</button>
+          <button class="sbtn sbtn-link" onclick="copyLink()">🔗 Share Quiz</button>
+        </div>
+      </div>
+      <div class="retake-row"><button onclick="retake()">↩ Retake the quiz</button></div>
+    </div>
+  </div>
+
+  <footer>Made with 💛 by <a href="https://hopethroughmusic.online" target="_blank">Hope Through Music</a> · <a href="https://hopethroughmusic.online" target="_blank">hopethroughmusic.online</a></footer>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// FLOATING ICONS
+// ═══════════════════════════════════════════════════════
+(function(){
+  const icons = ['📚','🎵','✏️','🎸','➕','🎹','📖','🎶','🔢','🎤','💡','🎼','📝','🎯','🌱'];
+  const bg = document.getElementById('floatBg');
+  for(let i=0;i<20;i++){
+    const el=document.createElement('span');
+    el.className='flt';
+    el.textContent=icons[Math.floor(Math.random()*icons.length)];
+    el.style.left=(Math.random()*100)+'vw';
+    el.style.animationDuration=(16+Math.random()*22)+'s';
+    el.style.animationDelay=-(Math.random()*35)+'s';
+    el.style.fontSize=(13+Math.random()*16)+'px';
+    bg.appendChild(el);
+  }
+})();
+
+// ═══════════════════════════════════════════════════════
+// QUIZ DATA
+// Types: spark | anchor | explorer | builder | echo
+// ═══════════════════════════════════════════════════════
+const Qs = [
+  {
+    text:"It's time to learn something brand new. Your first instinct is:",
+    layout:'grid',
+    opts:[
+      {e:'🎧',t:'Just throw me in',ts:'Figure it out as I go',s:'spark'},
+      {e:'📋',t:'Give me a plan first',ts:'Step by step, please',s:'anchor'},
+      {e:'🔍',t:'I want context first',ts:'Why does this matter?',s:'explorer'},
+      {e:'👥',t:'Who\'s doing this with me?',ts:'Better together',s:'echo'},
+    ]
+  },
+  {
+    text:"Which of these best describes how you feel when you're finally understanding something hard?",
+    layout:'list',
+    opts:[
+      {e:'⚡',t:'Like a switch flipped on',ts:'Sudden, electric, exhilarating',s:'spark'},
+      {e:'🧱',t:'Like a wall I can finally see over',ts:'Steady progress paying off',s:'builder'},
+      {e:'🌊',t:'Like I\'ve been swept somewhere new',ts:'Carried somewhere I didn\'t expect',s:'explorer'},
+      {e:'🤝',t:'Like I want to immediately tell someone',ts:'Good things are better shared',s:'echo'},
+      {e:'🏠',t:'Like something finally feels familiar',ts:'Safe, grounded, at home',s:'anchor'},
+    ]
+  },
+  {
+    text:"Pick your ideal learning environment:",
+    layout:'grid',
+    opts:[
+      {e:'🎵',t:'Music playing, energy up',ts:'Vibey and alive',s:'spark'},
+      {e:'🤫',t:'Total quiet, no distractions',ts:'Just me and the material',s:'anchor'},
+      {e:'🌿',t:'Outside or somewhere unexpected',ts:'New places, new thoughts',s:'explorer'},
+      {e:'🛋️',t:'Cozy spot, cozy pace',ts:'Comfort helps me focus',s:'builder'},
+      {e:'☕',t:'Café buzz, people around',ts:'Background energy is fuel',s:'echo'},
+    ]
+  },
+  {
+    text:"You're working through a tough math problem or a difficult passage in a book. You:",
+    layout:'list',
+    opts:[
+      {e:'💨',t:'Push through fast — momentum helps me',ts:'Stopping kills the flow',s:'spark'},
+      {e:'🐢',t:'Slow way down and re-read every step',ts:'Rushing never works for me',s:'anchor'},
+      {e:'🌀',t:'Try a completely different approach',ts:'There\'s always another way in',s:'explorer'},
+      {e:'✍️',t:'Write it out or draw it',ts:'I need to see it to understand it',s:'builder'},
+      {e:'🗣️',t:'Say it out loud or explain it to someone',ts:'Teaching it helps me get it',s:'echo'},
+    ]
+  },
+  {
+    text:"Which subject secretly (or not so secretly) makes your brain come alive?",
+    layout:'grid',
+    opts:[
+      {e:'🎵',t:'Music & the arts',ts:'It just hits different',s:'spark'},
+      {e:'🔢',t:'Math & patterns',ts:'Numbers make sense to me',s:'builder'},
+      {e:'📖',t:'Reading & writing',ts:'Words are my world',s:'anchor'},
+      {e:'🌍',t:'History or science',ts:'The big picture stuff',s:'explorer'},
+    ]
+  },
+  {
+    text:"Someone teaches you something in a way that finally clicks. What did they do differently?",
+    layout:'list',
+    opts:[
+      {e:'🎯',t:'They made it feel exciting and urgent',ts:'Energy is contagious',s:'spark'},
+      {e:'🗺️',t:'They showed me how it all connects',ts:'Context is everything',s:'explorer'},
+      {e:'🔁',t:'They went slowly and checked in often',ts:'No one gets left behind',s:'anchor'},
+      {e:'🎨',t:'They used examples, stories or visuals',ts:'Abstract things need grounding',s:'builder'},
+      {e:'💬',t:'They listened to me first',ts:'Being heard makes me open up',s:'echo'},
+    ]
+  },
+  {
+    text:"Pick the emoji that describes how your brain feels on a good learning day:",
+    layout:'grid',
+    opts:[
+      {e:'🔥',t:'On fire',ts:'',s:'spark'},
+      {e:'🧩',t:'Clicking',ts:'',s:'builder'},
+      {e:'🌊',t:'Flowing',ts:'',s:'explorer'},
+      {e:'🌱',t:'Growing',ts:'',s:'anchor'},
+    ]
+  },
+  {
+    text:"What does a great teacher or class give you that an average one doesn't?",
+    layout:'list',
+    opts:[
+      {e:'💡',t:'They make me feel like I\'m capable of more than I thought',ts:'They see potential I couldn\'t see',s:'spark'},
+      {e:'🏗️',t:'A real structure I can build on week by week',ts:'Progress you can actually measure',s:'builder'},
+      {e:'🧭',t:'New ways of thinking I didn\'t have before',ts:'They expand my whole world',s:'explorer'},
+      {e:'🤗',t:'A place where I feel safe to be confused',ts:'No judgment, no rush',s:'anchor'},
+      {e:'🫂',t:'A community that makes me want to keep showing up',ts:'Belonging changes everything',s:'echo'},
+    ]
+  },
+];
+
+// ═══════════════════════════════════════════════════════
+// RESULT TYPES
+// ═══════════════════════════════════════════════════════
+const RESULTS = {
+  spark:{
+    emoji:'⚡', color:'#C98A2E', bg:'#FAE8C4', border:'rgba(201,138,46,.32)',
+    band:'linear-gradient(90deg,#C98A2E,#E4AF5C,#F5CA70)',
+    title:'The Spark',
+    tagline:'"You don\'t just learn things — you ignite."',
+    desc:[
+      "You learn the way lightning strikes — sudden, electric, and impossible to ignore. You don't need a perfect setup or a detailed plan. You need momentum. Throw you into something and watch you figure it out.",
+      "You are at your best when learning feels alive. A great teacher, an interesting problem, a song that opens something in you — and suddenly you're unstoppable. You're the student who surprises everyone, including yourself.",
+      "Your secret power? You make other people around you want to try too. Your energy is contagious, your enthusiasm is real, and when you're lit up by something — everyone in the room can feel it."
+    ],
+    traits:['Electric','Quick to ignite','Bold','Inspires others'],
+    famous:'⚡', famousName:'Richard Feynman', famousWhy:'Nobel Prize physicist who said learning should be joyful, playful and electric. He made quantum mechanics feel like a party.',
+    subjects:['🎵 Music','🎸 Guitar or Voice','🎤 Singing','🎹 Piano'],
+    subjectColor:'#C98A2E', subjectBg:'#FAE8C4', subjectBorder:'rgba(201,138,46,.3)',
+    groupClass:{
+      brings:{
+        icon:'🔥',
+        title:'What you bring to the group',
+        text:'You are the spark that lights the whole room. Your excitement is genuinely contagious — when you are engaged, everyone around you leans in. You raise the energy of an entire class without even trying, and you remind other students why they showed up.',
+      },
+      gets:{
+        icon:'🚀',
+        title:'What you get from the group',
+        text:'You need an audience for your breakthroughs — and a small group gives you exactly that. Watching classmates react to your progress fuels you. The leaderboard, the cheers when you nail something, the accountability to show up fired up every single week — that\'s the environment where you do your absolute best work.',
+      },
+    },
+    isWaitlist: false,
+  },
+  anchor:{
+    emoji:'🏠', color:'#5C7E62', bg:'#C8DFCA', border:'rgba(92,126,98,.32)',
+    band:'linear-gradient(90deg,#5C7E62,#8AB090,#B8D4BC)',
+    title:'The Anchor',
+    tagline:'"Steady. Deep. Everything good is built on you."',
+    desc:[
+      "You are the learner who actually understands something before moving on. While the world rushes past, you slow down, ask the right questions, and lay a foundation that holds.",
+      "Reading, writing, music theory, step-by-step math — anything that rewards patience and careful attention is where you shine. You don't just learn things; you keep them. Your knowledge is solid because you earned it the right way.",
+      "People underestimate patience. But you know that slow, deep learning is the kind that actually lasts. You are the student teachers remember, not because you were the loudest, but because you were the most genuinely there."
+    ],
+    traits:['Patient','Thorough','Reliable','Deep roots'],
+    famous:'📚', famousName:'Maya Angelou', famousWhy:'Read everything. Re-read everything. Built a life and a legacy on the kind of deep, careful learning that never rushes.',
+    subjects:['📖 Reading & Writing','🎹 Piano','➗ Math','📚 Academic Tutoring'],
+    subjectColor:'#5C7E62', subjectBg:'#C8DFCA', subjectBorder:'rgba(92,126,98,.3)',
+    groupClass:{
+      brings:{
+        icon:'⚓',
+        title:'What you bring to the group',
+        text:'You are the steady, grounding presence every small group needs. While others rush ahead, you slow the room down in the best possible way — asking the question everyone else was too afraid to ask, making sure nobody gets left behind. Your thoroughness makes the whole class stronger.',
+      },
+      gets:{
+        icon:'🌱',
+        title:'What you get from the group',
+        text:'A small group gives you the gentle accountability your deep learning style thrives on. Hearing a classmate explain something a different way can unlock what a dozen re-reads couldn\'t. You bloom when you feel safe to take your time — and a warm, encouraging group class is exactly that kind of space.',
+      },
+    },
+    isWaitlist: false,
+  },
+  explorer:{
+    emoji:'🧭', color:'#4878A2', bg:'#DCF0F8', border:'rgba(72,120,162,.3)',
+    band:'linear-gradient(90deg,#4878A2,#82B0CC,#B4D4E6)',
+    title:'The Explorer',
+    tagline:'"You learn sideways — and somehow end up somewhere extraordinary."',
+    desc:[
+      "Straight lines bore you. You learn by wandering — connecting dots that no one else thought to connect, asking questions that weren't on the syllabus, finding the most interesting angle into any subject.",
+      "History leads you to music leads you to math leads you to a rabbit hole at 11pm that was completely worth it. You are the learner who shows up to every subject with genuine curiosity — not because you have to, but because you actually want to know.",
+      "You don't need a teacher to entertain you. You need one who respects your mind enough to go somewhere unexpected with you. When that happens? There's no stopping you."
+    ],
+    traits:['Curious','Connecting','Unconventional','Endlessly interested'],
+    famous:'🔭', famousName:'Leonardo da Vinci', famousWhy:'Refused to stay in one lane. Studied music, math, anatomy, art, engineering — all at once, all connected. That\'s you.',
+    subjects:['🌍 History & Science','🎵 Music Theory','📖 Reading','🎸 Guitar','➗ Math'],
+    subjectColor:'#4878A2', subjectBg:'#DCF0F8', subjectBorder:'rgba(72,120,162,.3)',
+    groupClass:{
+      brings:{
+        icon:'💡',
+        title:'What you bring to the group',
+        text:'You are the one who asks the question that opens up a whole new direction nobody planned for. Your curiosity makes lessons richer for everyone. You find connections between subjects — between a guitar chord and a math ratio, between a story\'s rhythm and a song\'s melody — that genuinely expand what other students see.',
+      },
+      gets:{
+        icon:'🌀',
+        title:'What you get from the group',
+        text:'Other learners show you ways of thinking you never would have found on your own. A small group is a collection of different minds and different approaches — and for an Explorer, that\'s treasure. You come in curious and you leave with three new questions, four new ideas, and at least one classmate who totally gets you.',
+      },
+    },
+    isWaitlist: false,
+  },
+  builder:{
+    emoji:'🧱', color:'#B86830', bg:'#FAE8D8', border:'rgba(184,104,48,.3)',
+    band:'linear-gradient(90deg,#B86830,#D8946A,#EEC09A)',
+    title:'The Builder',
+    tagline:'"Block by block. Layer by layer. You make things that last."',
+    desc:[
+      "You learn the way a great building goes up — one solid layer at a time. You don't skip steps. You don't cut corners. And the result is something real, something sturdy, something you actually built.",
+      "Math, music, reading comprehension — any subject that rewards steady, consistent practice is where you thrive. Week by week, you stack skills that compound. One day you look back and realize how far you've actually come.",
+      "You might not always feel like the fastest learner in the room. But here's what's true: builders outlast everyone. Your kind of learning doesn't just stick — it becomes part of who you are."
+    ],
+    traits:['Methodical','Consistent','Hands-on','Committed'],
+    famous:'🎹', famousName:'Yo-Yo Ma', famousWhy:'World\'s greatest cellist. Practiced every single day, built technique layer by layer for decades. No shortcuts. All builder.',
+    subjects:['➗ Math','🎹 Piano','📖 Reading','🎸 Guitar','📝 Writing'],
+    subjectColor:'#B86830', subjectBg:'#FAE8D8', subjectBorder:'rgba(184,104,48,.3)',
+    groupClass:{
+      brings:{
+        icon:'🏗️',
+        title:'What you bring to the group',
+        text:'You are the student who actually does the work between sessions — and other students notice. Your consistency sets a quiet standard. When you demonstrate something step by step, classmates who are lost suddenly find their footing. You model what real dedication looks like, without ever making it feel like pressure.',
+      },
+      gets:{
+        icon:'📈',
+        title:'What you get from the group',
+        text:'A small group gives you the structured, week-by-week progression your builder brain was made for. Seeing your classmates at similar stages validates your pace and reminds you that real growth takes real time. The leaderboard and weekly check-ins give you measurable milestones — and nothing motivates a Builder more than watching the numbers go up.',
+      },
+    },
+    isWaitlist: false,
+  },
+  echo:{
+    emoji:'🤝', color:'#7B5EA0', bg:'#EDE8F8', border:'rgba(123,94,160,.28)',
+    band:'linear-gradient(90deg,#7B5EA0,#B09CCE,#D4CEEE)',
+    title:'The Echo',
+    tagline:'"Learning alone is fine. Learning together is when you actually fly."',
+    desc:[
+      "You're the reason a class becomes a community. You learn by connecting — to other people, to shared experiences, to the energy of a room where everyone is growing together.",
+      "Group music classes, collaborative study, learning circles — give you a table of peers and a caring teacher and watch what happens. You don't just absorb information. You expand it, discuss it, pass it around, and send it back richer than it arrived.",
+      "You are the learner who makes the people around you better. The encourager. The one who remembers everyone's name. The reason someone else shows up on the days they almost didn't. That's not a small thing. That's everything."
+    ],
+    traits:['Collaborative','Encouraging','Community-driven','Makes others better'],
+    famous:'🎤', famousName:'Brené Brown', famousWhy:'Built a whole career around the truth that connection changes us. Learns out loud, with people, in community. Just like you.',
+    subjects:['🎵 Music','🎤 Voice & Singing','🎸 Guitar','➗ Math Groups','📚 Homeschool Co-op'],
+    subjectColor:'#7B5EA0', subjectBg:'#EDE8F8', subjectBorder:'rgba(123,94,160,.28)',
+    groupClass:{
+      brings:{
+        icon:'🫶',
+        title:'What you bring to the group',
+        text:'You are the heartbeat of any small group you join. You remember classmates\' names, celebrate their wins louder than your own, and have an almost magical ability to make a nervous student feel like they belong. Teachers notice. Classmates remember. Without even realizing it, you are the reason the group actually becomes a community.',
+      },
+      gets:{
+        icon:'🏡',
+        title:'What you get from the group',
+        text:'A small group is quite literally your ideal learning environment — and not just because it\'s more fun. Being seen by peers, encouraged in real time, and held accountable by people you actually care about is what makes learning stick for you. You don\'t just want to improve. You want to improve together. And here, you will.',
+      },
+    },
+    isWaitlist: false,
+  },
+};
+
+// ═══════════════════════════════════════════════════════
+// STUDIO COPY — soft, warm, tailored per type
+// ═══════════════════════════════════════════════════════
+const STUDIO = {
+  spark:{
+    eyebrow:'⚡ Sound familiar?',
+    h:'You need a place that keeps up with your energy.',
+    p:'At Hope Through Music, our small group classes are alive — encouraging, fast-paced, and full of people who bring the same spark you do. Whether it\'s music, academic tutoring, or something in between, come find out what happens when your energy meets the right environment.',
+    btn:'Book a Free Trial Class 🎉',
+    href:'https://hopethroughmusic.online/booking',
+    rose:false,
+  },
+  anchor:{
+    eyebrow:'🏠 You\'ve found your place.',
+    h:'You deserve a learning community that honors the way you learn.',
+    p:'Hope Through Music is built for students who want to go deep, not just fast. Our small group classes are patient, structured, and encouraging — whether you\'re working through piano, math, or reading. Come experience learning that meets you where you are.',
+    btn:'Book a Free Trial Class 📚',
+    href:'https://hopethroughmusic.online/booking',
+    rose:false,
+  },
+  explorer:{
+    eyebrow:'🧭 You\'ve been waiting for this.',
+    h:'A learning home for the student who doesn\'t fit the mold.',
+    p:'Hope Through Music welcomes the curious, the eclectic, the student who asks "but why?" We offer music, academic subjects, and homeschool classes — and our teachers are the kind who actually love going off-script with you.',
+    btn:'Book a Free Trial Class 🔍',
+    href:'https://hopethroughmusic.online/booking',
+    rose:false,
+  },
+  builder:{
+    eyebrow:'🧱 This was made for you.',
+    h:'Real progress. Real structure. A real community to build with.',
+    p:'Our small group classes at Hope Through Music are designed for the student who shows up consistently and wants to see genuine growth — in music, in math, in reading. Week by week, block by block. Come start building.',
+    btn:'Book a Free Trial Class 📈',
+    href:'https://hopethroughmusic.online/booking',
+    rose:false,
+  },
+  echo:{
+    eyebrow:'🤝 You belong here.',
+    h:'The community you\'ve been looking for is already waiting.',
+    p:'Hope Through Music\'s small group model was built for learners exactly like you. Students encourage each other, grow together, and genuinely show up for one another. Come try a free class and feel what it\'s like to learn somewhere you truly belong.',
+    btn:'Book a Free Trial Class 🏡',
+    href:'https://hopethroughmusic.online/booking',
+    rose:false,
+  },
+};
+
+// ═══════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════
+let cur=0, sel=null, userName='';
+let scores={spark:0,anchor:0,explorer:0,builder:0,echo:0};
+
+// ═══════════════════════════════════════════════════════
+// ENGINE
+// ═══════════════════════════════════════════════════════
+function startQuiz(){ show('s-quiz'); renderQ(); }
+
+function renderQ(){
+  const q=Qs[cur], total=Qs.length, pct=Math.round(cur/total*100);
+  document.getElementById('p-lbl').textContent=`${cur+1} of ${total}`;
+  document.getElementById('p-pct').textContent=pct+'%';
+  document.getElementById('p-fill').style.width=pct+'%';
+  sel=null;
+
+  const grid = q.layout==='grid';
+  const optsHtml = grid
+    ? `<div class="opts-grid">${q.opts.map((o,i)=>`
+        <button class="opt-tile" onclick="pick(${i})">
+          <span class="te">${o.e}</span>
+          <span class="tt">${o.t}</span>
+          ${o.ts?`<span class="ts">${o.ts}</span>`:''}
+        </button>`).join('')}</div>`
+    : `<div class="opts-list">${q.opts.map((o,i)=>`
+        <button class="opt-row" onclick="pick(${i})">
+          <span class="re">${o.e}</span>
+          <span class="rtext"><div class="rt">${o.t}</div>${o.ts?`<div class="rs">${o.ts}</div>`:''}</span>
+        </button>`).join('')}</div>`;
+
+  document.getElementById('q-card').innerHTML=`
+    <div class="q-num">Question ${cur+1} of ${total}</div>
+    <div class="q-text">${q.text}</div>
+    ${q.sub?`<div class="q-sub">${q.sub}</div>`:''}
+    ${optsHtml}
+    <div class="q-nav">
+      ${cur>0?`<button class="btn-back" onclick="goBack()">← Back</button>`:'<div></div>'}
+      <button class="btn-next" id="btn-next" disabled onclick="nextQ()">
+        ${cur<Qs.length-1?'Next →':'See My Result →'}
+      </button>
+    </div>
+  `;
+}
+
+function pick(i){
+  sel=i;
+  const grid=Qs[cur].layout==='grid';
+  document.querySelectorAll(grid?'.opt-tile':'.opt-row').forEach((b,j)=>b.classList.toggle('sel',j===i));
+  document.getElementById('btn-next').disabled=false;
+}
+
+function nextQ(){
+  if(sel===null) return;
+  scores[Qs[cur].opts[sel].s]++;
+  cur++;
+  if(cur>=Qs.length) showLoading();
+  else renderQ();
+}
+
+function goBack(){ if(cur>0){cur--;renderQ();} }
+
+function showLoading(){
+  show('s-loading');
+  const steps=[
+    ['🧠','Analyzing your learning style...','Cross-referencing with 47 learner profiles'],
+    ['📚','Scanning your answers...','Looking for patterns...'],
+    ['✨','Almost there...','This one is genuinely interesting'],
+    ['🎯','Finalizing your result...','Get ready...'],
+  ];
+  let i=0;
+  const iv=setInterval(()=>{
+    if(i<steps.length){
+      const [e,h,p]=steps[i];
+      document.getElementById('ldr-e').textContent=e;
+      document.getElementById('ldr-h').textContent=h;
+      document.getElementById('ldr-p').textContent=p;
+      i++;
+    }
+  },520);
+  setTimeout(()=>{clearInterval(iv);show('s-lead');},2500);
+}
+
+// ═══════════════════════════════════════════════════════
+// LEAD
+// ═══════════════════════════════════════════════════════
+function submitLead(){
+  const name=document.getElementById('l-name').value.trim();
+  const email=document.getElementById('l-email').value.trim();
+  if(!name||!email){alert('Just your name and email — then the big reveal! 🎉');return;}
+  userName=name;
+  buildResult();
+  show('s-result');
+  setTimeout(launchConfetti,320);
+}
+
+// ═══════════════════════════════════════════════════════
+// BUILD RESULT
+// ═══════════════════════════════════════════════════════
+function topType(){
+  return Object.entries(scores).sort((a,b)=>b[1]-a[1])[0][0];
+}
+
+function buildResult(){
+  const type=topType();
+  const r=RESULTS[type];
+  const sc=STUDIO[type];
+
+  const descHtml=r.desc.map(p=>`<p>${p}</p>`).join('');
+
+  document.getElementById('r-hero').innerHTML=`
+    <div class="r-band" style="background:${r.band}"></div>
+    <div class="r-inner">
+      <div class="r-ring" style="background:${r.bg};border:3px solid ${r.border}">${r.emoji}</div>
+      <div class="r-you-are" style="color:${r.color}">${userName?userName+', you are...':'You are...'}</div>
+      <div class="r-title">${r.title}</div>
+      <div class="r-tagline" style="color:${r.color}">${r.tagline}</div>
+      <div class="r-desc">${descHtml}</div>
+      <div class="r-traits">
+        ${r.traits.map(t=>`<span class="r-trait" style="color:${r.color};border-color:${r.border};background:${r.bg}">${t}</span>`).join('')}
+      </div>
+      <div class="famous-box" style="background:${r.bg}">
+        <span class="famous-emoji">${r.famous}</span>
+        <div>
+          <div class="famous-label" style="color:${r.color}">Your learning twin</div>
+          <div class="famous-name">${r.famousName}</div>
+          <div class="famous-why">${r.famousWhy}</div>
+        </div>
+      </div>
+      <div class="subjects-box" style="background:${r.bg}">
+        <div class="subjects-label" style="color:${r.color}">Subjects where you'll thrive</div>
+        <div class="subject-tags">
+          ${r.subjects.map(s=>`<span class="subject-tag" style="color:${r.subjectColor};border-color:${r.subjectBorder};background:${r.subjectBg}">${s}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+
+  // group class insight card
+  const gc = r.groupClass;
+  document.getElementById('r-group').innerHTML=`
+    <div class="group-card" style="border-top:4px solid ${r.color}">
+      <div class="group-eyebrow" style="color:${r.color}">👥 You in a small group class</div>
+      <div class="group-split">
+        <div class="group-col" style="background:${r.bg}">
+          <div class="group-col-icon">${gc.brings.icon}</div>
+          <div class="group-col-title">${gc.brings.title}</div>
+          <div class="group-col-text" style="color:#5C4A30">${gc.brings.text}</div>
+        </div>
+        <div class="group-col" style="background:${r.bg}">
+          <div class="group-col-icon">${gc.gets.icon}</div>
+          <div class="group-col-title">${gc.gets.title}</div>
+          <div class="group-col-text" style="color:#5C4A30">${gc.gets.text}</div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('r-studio').innerHTML=`
+    <div class="studio-card">
+      <div class="studio-eyebrow">${sc.eyebrow}</div>
+      <h3>${sc.h}</h3>
+      <p>${sc.p}</p>
+      <a href="${sc.href}" target="_blank" class="btn-studio${sc.rose?' rose-btn':''}">${sc.btn}</a>
+    </div>
+  `;
+
+  window._shareText=`I just found out I'm "${r.title}" ${r.emoji}\n\n${r.tagline}\n\nWhat kind of learner are YOU? Take the quiz → hopethroughmusic.online 🎶`;
+}
+
+// ═══════════════════════════════════════════════════════
+// SHARE
+// ═══════════════════════════════════════════════════════
+function fbShare(){
+  const url=encodeURIComponent('https://hopethroughmusic.online');
+  const q=encodeURIComponent(window._shareText||'Find out what kind of learner you are!');
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${q}`,'_blank','width=600,height=440');
+  return false;
+}
+function copyResult(){
+  navigator.clipboard.writeText(window._shareText||'hopethroughmusic.online').then(()=>alert('Copied! 🎉 Paste it anywhere to share.'));
+}
+function copyLink(){
+  navigator.clipboard.writeText('https://hopethroughmusic.online').then(()=>alert('Quiz link copied! 🎶 Share it with a friend.'));
+}
+function retake(){
+  cur=0;sel=null;userName='';
+  scores={spark:0,anchor:0,explorer:0,builder:0,echo:0};
+  show('s-intro');
+}
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ═══════════════════════════════════════════════════════
+// CONFETTI
+// ═══════════════════════════════════════════════════════
+function launchConfetti(){
+  const cv=document.getElementById('cv');
+  const cx=cv.getContext('2d');
+  cv.width=window.innerWidth;cv.height=window.innerHeight;
+  const cols=['#5C7E62','#A8C5AC','#C98A2E','#E4AF5C','#C4635C','#7B5EA0','#82B0CC','#FFD966','#F4C2C0','#D4CEEE','#B86830','#EEC09A'];
+  const N=190;
+  const ps=Array.from({length:N},()=>({
+    x:Math.random()*cv.width,
+    y:-10-Math.random()*cv.height*.5,
+    w:5+Math.random()*10,h:4+Math.random()*5,
+    c:cols[Math.floor(Math.random()*cols.length)],
+    rot:Math.random()*360,rs:(Math.random()-.5)*8,
+    vx:(Math.random()-.5)*4,vy:2+Math.random()*4.5,op:1,
+  }));
+  let f=0;
+  function draw(){
+    cx.clearRect(0,0,cv.width,cv.height);
+    ps.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;p.rot+=p.rs;
+      if(f>110)p.op=Math.max(0,p.op-.009);
+      cx.save();cx.globalAlpha=p.op;
+      cx.translate(p.x+p.w/2,p.y+p.h/2);
+      cx.rotate(p.rot*Math.PI/180);
+      cx.fillStyle=p.c;
+      cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+      cx.restore();
+    });
+    f++;
+    if(f<200)requestAnimationFrame(draw);
+    else cx.clearRect(0,0,cv.width,cv.height);
+  }
+  draw();
+}
+</script>
+</body>
+</html>
