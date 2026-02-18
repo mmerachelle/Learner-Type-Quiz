@@ -736,7 +736,7 @@ const STUDIO = {
     h:'You need a place that keeps up with your energy.',
     p:'At Hope Through Music, our small group classes are alive — encouraging, fast-paced, and full of people who bring the same spark you do. Whether it\'s music, academic tutoring, or something in between, come find out what happens when your energy meets the right environment.',
     btn:'Book a Free Trial Class 🎉',
-    href:'https://hopethroughmusic.online/booking',
+    href:'https://hopethroughmusic.online',
     rose:false,
   },
   anchor:{
@@ -744,7 +744,7 @@ const STUDIO = {
     h:'You deserve a learning community that honors the way you learn.',
     p:'Hope Through Music is built for students who want to go deep, not just fast. Our small group classes are patient, structured, and encouraging — whether you\'re working through piano, math, or reading. Come experience learning that meets you where you are.',
     btn:'Book a Free Trial Class 📚',
-    href:'https://hopethroughmusic.online/booking',
+    href:'https://hopethroughmusic.online',
     rose:false,
   },
   explorer:{
@@ -752,7 +752,7 @@ const STUDIO = {
     h:'A learning home for the student who doesn\'t fit the mold.',
     p:'Hope Through Music welcomes the curious, the eclectic, the student who asks "but why?" We offer music, academic subjects, and homeschool classes — and our teachers are the kind who actually love going off-script with you.',
     btn:'Book a Free Trial Class 🔍',
-    href:'https://hopethroughmusic.online/booking',
+    href:'https://hopethroughmusic.online',
     rose:false,
   },
   builder:{
@@ -760,7 +760,7 @@ const STUDIO = {
     h:'Real progress. Real structure. A real community to build with.',
     p:'Our small group classes at Hope Through Music are designed for the student who shows up consistently and wants to see genuine growth — in music, in math, in reading. Week by week, block by block. Come start building.',
     btn:'Book a Free Trial Class 📈',
-    href:'https://hopethroughmusic.online/booking',
+    href:'https://hopethroughmusic.online',
     rose:false,
   },
   echo:{
@@ -768,7 +768,7 @@ const STUDIO = {
     h:'The community you\'ve been looking for is already waiting.',
     p:'Hope Through Music\'s small group model was built for learners exactly like you. Students encourage each other, grow together, and genuinely show up for one another. Come try a free class and feel what it\'s like to learn somewhere you truly belong.',
     btn:'Book a Free Trial Class 🏡',
-    href:'https://hopethroughmusic.online/booking',
+    href:'https://hopethroughmusic.online',
     rose:false,
   },
 };
@@ -860,14 +860,37 @@ function showLoading(){
 // ═══════════════════════════════════════════════════════
 // LEAD
 // ═══════════════════════════════════════════════════════
+// ── PASTE YOUR GOOGLE APPS SCRIPT URL BELOW ──────────────────
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxS1fLzWDJd_32C4L1QTAKmUBUcanGzW87X14t8CR6oo1aTiFGFUFMLTAS_kveXS5T1/exec';
+// ─────────────────────────────────────────────────────────────
+
 function submitLead(){
-  const name=document.getElementById('l-name').value.trim();
-  const email=document.getElementById('l-email').value.trim();
+  const name    = document.getElementById('l-name').value.trim();
+  const email   = document.getElementById('l-email').value.trim();
+  const phone   = document.getElementById('l-phone').value.trim();
+  const comments= document.getElementById('l-comments').value.trim();
+  const optIn   = document.getElementById('l-opt').checked;
+
   if(!name||!email){alert('Just your name and email — then the big reveal! 🎉');return;}
-  userName=name;
+
+  userName = name;
   buildResult();
   show('s-result');
-  setTimeout(launchConfetti,320);
+  setTimeout(launchConfetti, 320);
+
+  // Silently send to Google Sheets — user never sees this
+  if(SHEET_URL && SHEET_URL !== 'https://script.google.com/macros/s/AKfycbxS1fLzWDJd_32C4L1QTAKmUBUcanGzW87X14t8CR6oo1aTiFGFUFMLTAS_kveXS5T1/exec'){
+    const learnerType = RESULTS[topType()].title;
+    const payload = { name, email, phone, comments,
+                      learnerType, optIn: optIn ? 'Yes' : 'No',
+                      timestamp: new Date().toLocaleString() };
+    fetch(SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(()=>{}); // silent fail — never interrupts the quiz
+  }
 }
 
 // ═══════════════════════════════════════════════════════
