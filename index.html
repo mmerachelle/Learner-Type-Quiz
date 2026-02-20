@@ -878,16 +878,16 @@ function submitLead(){
   show('s-result');
   setTimeout(launchConfetti, 320);
 
-  // Silently send to Google Sheets — user never sees this
-  if(SHEET_URL && SHEET_URL !== 'https://script.google.com/macros/s/AKfycbxS1fLzWDJd_32C4L1QTAKmUBUcanGzW87X14t8CR6oo1aTiFGFUFMLTAS_kveXS5T1/exec'){
+// Silently send to Google Sheets — user never sees this
+  if(SHEET_URL){
     const learnerType = RESULTS[topType()].title;
     const payload = { name, email, phone, comments,
                       learnerType, optIn: optIn ? 'Yes' : 'No',
                       timestamp: new Date().toLocaleString() };
-  const esc = encodeURIComponent;
-const query = Object.keys(payload).map(k => esc(k) + '=' + esc(payload[k])).join('&');
-const img = new Image();
-img.src = SHEET_URL + '?' + query; // silent fail — never interrupts the quiz
+    const esc = encodeURIComponent;
+    const query = Object.keys(payload).map(k => esc(k) + '=' + esc(payload[k])).join('&');
+    const img = new Image();
+    img.src = SHEET_URL + '?' + query;
   }
 }
 
